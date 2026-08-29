@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>とかちプログラミングスクール｜2026年4月生 第0期モニター募集</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QJ9WR65XV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QJ9WR65XV');
+  </script>
+  <meta name="description" content="とかちプログラミングスクール。2026年4月生の第0期モニター募集ページです。未経験から、ウェブサイト作成、ウェブアプリケーション、データベース、AI連携まで段階的に学びます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Zen+Old+Mincho:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3ede4;
+      --paper: rgba(255, 251, 245, 0.86);
+      --paper-strong: #fcf9f4;
+      --ink: #1c2230;
+      --muted: #6b6f7b;
+      --line: rgba(28, 34, 48, 0.14);
+      --line-strong: rgba(28, 34, 48, 0.3);
+      --accent: #d6593c;
+      --accent-deep: #ad3f2a;
+      --navy: #1c2d4a;
+      --shadow: 0 24px 60px rgba(28, 34, 48, 0.08);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at top left, rgba(214, 89, 60, 0.08), transparent 28%),
+        radial-gradient(circle at right 14% top 8%, rgba(28, 45, 74, 0.08), transparent 22%),
+        linear-gradient(180deg, #f6f0e8 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(28, 34, 48, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(28, 34, 48, 0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    .display,
+    h1,
+    h2 {
+      font-family: "Zen Old Mincho", serif;
+      letter-spacing: -0.03em;
+    }
+
+    .page {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topline {
+      border-bottom: 1px solid var(--line);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      backdrop-filter: blur(12px);
+    }
+
+    .topline__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(243, 237, 228, 0.82);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .site-header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .site-brand {
+      display: grid;
+      gap: 4px;
+    }
+
+    .site-brand__eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .site-brand__name {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 34px 0 28px;
+    }
+
+    .hero-grid {
+      display: block;
+      position: relative;
+    }
+
+    .panel {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-copy {
+      padding: 38px;
+      min-width: 0;
+      background:
+        linear-gradient(135deg, rgba(252, 249, 244, 0.98), rgba(248, 241, 232, 0.82)),
+        linear-gradient(120deg, rgba(214, 89, 60, 0.14), transparent 40%);
+    }
+
+    .hero-copy > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 1px solid rgba(214, 89, 60, 0.16);
+    }
+
+    .label-row,
+    .chip-row,
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .label-row {
+      margin-bottom: 18px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .label--accent {
+      border-color: rgba(214, 89, 60, 0.32);
+      color: var(--accent);
+      background: rgba(214, 89, 60, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(2.9rem, 4.6vw, 3.8rem);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      max-width: none;
+      white-space: nowrap;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-kicker {
+      font-size: 1.08rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .hero-lead {
+      max-width: none;
+      width: 100%;
+      font-size: 1.06rem;
+      line-height: 1.9;
+      color: rgba(28, 34, 48, 0.8);
+      margin-bottom: 28px;
+    }
+
+    .hero-quote {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.56);
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    .hero-flash {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      width: 154px;
+      padding: 14px 14px 12px;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      gap: 4px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1c2d4a 0%, #0c1628 100%);
+      color: #fff;
+      box-shadow:
+        0 22px 40px rgba(12, 20, 38, 0.4),
+        0 0 0 5px rgba(252, 249, 244, 0.94),
+        0 0 0 6px rgba(214, 89, 60, 0.28);
+      transform: rotate(-4deg);
+      transform-origin: center center;
+      z-index: 4;
+    }
+
+    .hero-flash__title {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      width: 100%;
+    }
+
+    .hero-flash__count {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+    }
+
+    .hero-flash__count-label {
+      font-size: 0.66rem;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-flash__count-number {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 2.4rem;
+      line-height: 0.9;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-flash__count-unit {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-flash__note {
+      margin: 0;
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.4;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0 0;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(28, 34, 48, 0.06);
+      border: 1px solid rgba(28, 34, 48, 0.08);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .mini-card,
+    .section-shell,
+    .faq-item {
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+
+    .section-kicker,
+    .list-meta,
+    .faq-label,
+    .small-label {
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .main {
+      padding: 18px 0 72px;
+    }
+
+    .section-shell {
+      padding: 34px;
+      margin-top: 20px;
+      background: rgba(255, 251, 245, 0.78);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--muted);
+      padding-top: 8px;
+    }
+
+    .section-title {
+      display: grid;
+      gap: 10px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.1;
+      max-width: 24ch;
+      text-wrap: balance;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .section-facts {
+      margin: 14px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .section-facts p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+      max-width: none;
+    }
+
+    .section-facts p:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .manifesto-grid,
+    .support-grid,
+    .venue-grid,
+    .entry-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .manifesto-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .manifesto-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .manifesto-card--accent {
+      background: linear-gradient(160deg, rgba(214, 89, 60, 0.1), rgba(255, 255, 255, 0.92));
+    }
+
+    .concept-quote {
+      display: block;
+      margin: 0 0 18px;
+      padding-left: 14px;
+      border-left: 2px solid rgba(214, 89, 60, 0.36);
+      font-size: 0.88rem;
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .manifesto-card blockquote {
+      margin: 0;
+      font-family: "Zen Old Mincho", serif;
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1.35;
+      text-wrap: balance;
+    }
+
+    .concept-statement {
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: linear-gradient(160deg, rgba(214, 89, 60, 0.07), rgba(255, 255, 255, 0.92));
+      margin-bottom: 18px;
+    }
+
+    .concept-statement__body {
+      margin: 0 0 20px;
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--navy);
+    }
+
+    .concept-en {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .concept-statement__tagline {
+      margin: 0 0 16px;
+      font-family: "Zen Old Mincho", serif;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      color: var(--navy);
+      letter-spacing: 0.04em;
+    }
+
+    .concept-ism {
+      margin: 18px 0 0;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-family: "Zen Old Mincho", serif;
+      font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+
+    .manifesto-card p,
+    .manifesto-card li {
+      color: var(--muted);
+    }
+
+    .manifesto-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .manifesto-list li {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .program-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .program-item {
+      display: grid;
+      grid-template-columns: 94px 1fr 230px;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .program-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .program-no {
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .program-name {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.45rem;
+      line-height: 1.25;
+    }
+
+    .program-copy {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .list-meta {
+      color: var(--accent);
+      text-align: right;
+    }
+
+    .support-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mini-card {
+      padding: 24px;
+      min-height: 220px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(250, 244, 236, 0.86));
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: rgba(28, 34, 48, 0.06);
+      border: 1px solid rgba(28, 34, 48, 0.1);
+      margin-bottom: 10px;
+    }
+
+    .mini-card h3 {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.4rem;
+      margin: 0 0 10px;
+    }
+
+    .mini-card p {
+      color: var(--muted);
+    }
+
+    .monitor-banner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 18px;
+    }
+
+    .info-card {
+      padding: 28px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .info-card h3,
+    .price-card h3,
+    .venue-card h3 {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .summary-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+    }
+
+    .summary-list li strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .schedule-table {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .schedule-row:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .schedule-date {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .schedule-body strong {
+      display: block;
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .schedule-body p {
+      color: var(--muted);
+    }
+
+    .calendar-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .calendar-board {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .calendar-side {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.72);
+      align-self: start;
+    }
+
+    .calendar-side h3 {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin: 10px 0 16px;
+    }
+
+    .calendar-notes {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .calendar-notes li {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .calendar-notes li strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .deadline-label {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .calendar-month {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .calendar-month h3 {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.6rem;
+      margin: 0;
+    }
+
+    .calendar-month p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .calendar-weekdays,
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .calendar-weekdays {
+      margin-bottom: 8px;
+    }
+
+    .calendar-weekdays span {
+      text-align: center;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .calendar-cell {
+      min-height: 80px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(252, 249, 244, 0.84);
+      display: grid;
+      align-content: start;
+      gap: 8px;
+    }
+
+    .calendar-cell--empty {
+      background: rgba(28, 34, 48, 0.02);
+      border-style: dashed;
+    }
+
+    .calendar-cell--event {
+      border-color: rgba(214, 89, 60, 0.3);
+      background: linear-gradient(160deg, rgba(214, 89, 60, 0.12), rgba(255, 255, 255, 0.96));
+    }
+
+    .calendar-day {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .calendar-cell--event .calendar-day {
+      color: var(--accent);
+    }
+
+    .calendar-event {
+      font-size: 0.68rem;
+      line-height: 1.45;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .calendar-event strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+    }
+
+    .venue-grid,
+    .entry-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .venue-card,
+    .price-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .venue-card p,
+    .price-card p,
+    .price-card li,
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    .price-card p {
+      margin: 0;
+    }
+
+    .venue-name {
+      margin-top: 20px;
+    }
+
+    .venue-sub {
+      display: block;
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    .price-card h3 {
+      margin-bottom: 4px;
+    }
+
+    .price-callout {
+      display: inline-flex;
+      align-items: end;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--accent);
+    }
+
+    .price-callout strong {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1;
+      font-family: "Zen Old Mincho", serif;
+    }
+
+    .price-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-item {
+      padding: 24px;
+      min-height: 188px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .faq-label {
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      font-family: "Zen Old Mincho", serif;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      margin-top: 20px;
+      padding: 34px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line-strong);
+      background:
+        linear-gradient(135deg, rgba(28, 45, 74, 0.98), rgba(24, 34, 52, 0.95)),
+        radial-gradient(circle at right top, rgba(214, 89, 60, 0.3), transparent 30%);
+      color: #fff;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.15;
+      max-width: 18ch;
+      margin: 0 auto 14px;
+    }
+
+    .cta p {
+      max-width: 56ch;
+      color: rgba(255, 255, 255, 0.78);
+      margin: 0 auto;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      justify-content: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .button--primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 18px 32px rgba(214, 89, 60, 0.22);
+    }
+
+    .button--secondary {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.28);
+      color: #fff;
+    }
+
+    .hero-actions .button--secondary {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-actions .button--secondary:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    footer {
+      padding: 24px 0 44px;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1200px) {
+      h1 {
+        font-size: clamp(2.8rem, 6vw, 3.8rem);
+      }
+
+      .hero-summary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .manifesto-grid,
+      .monitor-banner,
+      .calendar-layout,
+      .entry-grid,
+      .venue-grid,
+      .support-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .program-item,
+      .schedule-row {
+        grid-template-columns: 1fr;
+      }
+
+      .list-meta {
+        text-align: left;
+      }
+
+      .hero-copy,
+      .section-shell,
+      .cta {
+        padding: 26px;
+      }
+
+    }
+
+    @media (max-width: 720px) {
+      body::before {
+        background-size: 40px 40px;
+      }
+
+      .site-header__inner,
+      .topline__inner {
+        align-items: flex-start;
+      }
+
+      .calendar-cell {
+        min-height: 88px;
+      }
+
+      .label-row,
+      .chip-row,
+      .tag-row,
+      .site-nav,
+      .cta-actions {
+        gap: 10px;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.1rem, 8vw, 3rem);
+        line-height: 1.08;
+        white-space: normal;
+      }
+
+      .hero-lead {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .hero-flash {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 0 0 20px;
+        padding: 16px 20px 14px;
+        transform: none;
+        box-shadow:
+          0 16px 32px rgba(12, 20, 38, 0.32),
+          0 0 0 4px rgba(252, 249, 244, 0.92),
+          0 0 0 5px rgba(214, 89, 60, 0.24);
+      }
+
+      .hero-flash__count-number {
+        font-size: 2.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topline">
+      <div class="wrap topline__inner">
+        <span>十勝 / プログラミングスクール / コミュニティ</span>
+        <span>2026年4月生募集 / 第0期モニター生募集</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <div class="site-brand">
+          <span class="site-brand__eyebrow">Tokachi Programming School</span>
+          <span class="site-brand__name">とかちプログラミングスクール</span>
+        </div>
+        <nav class="site-nav">
+          <a href="#concept">Concept</a>
+          <a href="#system">System</a>
+          <a href="#program">Program</a>
+          <a href="#monitor">Monitor</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#entry">Fee</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <aside class="hero-flash" role="status" aria-label="追加募集 残り5名 定員に達し次第終了">
+          <span class="hero-flash__title">追加募集</span>
+          <div class="hero-flash__count">
+            <span class="hero-flash__count-label">残り</span>
+            <span class="hero-flash__count-number">5</span>
+            <span class="hero-flash__count-unit">名</span>
+          </div>
+          <p class="hero-flash__note">定員に達し次第終了</p>
+        </aside>
+        <div class="panel hero-copy">
+          <div class="label-row">
+            <span class="label label--accent">2026年4月生募集</span>
+            <span class="label">第0期モニター生募集</span>
+            <span class="label">スクール料金無料</span>
+          </div>
+
+          <p class="hero-kicker">アイデアとテクノロジーで十勝の経済を成長させる人になろう</p>
+          <h1>とかちプログラミングスクール開校</h1>
+          <p class="hero-lead">
+            AIによる社会変容 - AIX（AI Transformation） - の時代に備え、十勝でITスキルを学び続けられる場所が、ここから始まります。<br>
+            教わって終わる受講型ではなく、参加し、試し、仲間と続けていく参加型の継続スクールです。
+          </p>
+
+          <div class="chip-row">
+            <span class="chip">プログラミング</span>
+            <span class="chip">データ活用</span>
+            <span class="chip">AI連携</span>
+            <span class="chip">参加型</span>
+            <span class="chip">コミュニティ</span>
+            <span class="chip">無料</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button--primary" href="https://forms.gle/Qd1MoM8bgF7TJDjq8" target="_blank" rel="noopener">第0期モニターに申し込む</a>
+            <a class="button button--secondary" href="https://forms.gle/JQQFdrLYjDHfyb7PA" target="_blank" rel="noopener">まず説明会に参加する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="main">
+      <div class="wrap">
+        <section class="section-shell" id="concept">
+          <div class="section-head">
+            <div class="section-kicker">Concept</div>
+            <div class="section-title">
+              <h2>どうやってつくるかを知るには、まず、つくりはじめなければならない。</h2>
+              <blockquote class="concept-quote" lang="en">"To know what you're going to draw, you have to begin drawing."</blockquote>
+              <p>
+                学ぶ前に、まず、つくりはじめること。
+                このスクールは、手を動かし、試し、見直し、改善しながら、つくる力を育てていく場です。
+                そして、その先にある自走する力まで「ITの学び方そのもの」を学び、スクールが終わっても前に進み続けられる人を増やしていきます。
+                第0期はその学びの場そのものを、参加者と一緒に育てていきます。
+              </p>
+            </div>
+          </div>
+
+          <div class="concept-statement">
+            <p class="concept-statement__body">
+              知っているだけ<span class="concept-en">（Knowledge）</span>では、価値にならない。<br>
+              つくるだけ<span class="concept-en">（Output）</span>でも、足りない。<br>
+              つくったものが、誰かに届き、価値になること<span class="concept-en">（Outcome）</span>までを大切にする。
+            </p>
+            <p class="concept-statement__tagline">価値を届ける人になる。</p>
+            <p class="concept-statement__tagline">十勝の価値は、十勝でつくる。</p>
+          </div>
+
+        </section>
+
+        <section class="section-shell" id="system">
+          <div class="section-head">
+            <div class="section-kicker">System</div>
+            <div class="section-title">
+              <h2>課題学習 + 毎週報告会 + 毎月講義が、続けるための環境と仕組み</h2>
+              <p>
+                あらかじめ用意された課題を自分のペースで進め、毎週の進捗を報告し合い、月1回はオンサイトで講義と交流。この3つが組み合わさることで、一人では続きにくい学習が、仕組みとして続いていきます。
+              </p>
+            </div>
+          </div>
+
+          <div class="support-grid">
+            <article class="mini-card">
+              <span class="card-tag">いつでも・どこでも</span>
+              <h3>課題学習</h3>
+              <p>このスクールの学び方は、参加型・自走型です。あらかじめ用意された課題を、翌週の進捗報告会までに自分のペースで進めます。わからないことや疑問はチャットでいつでも質問できます。講義を受けて終わりではなく、実際に手を動かして課題に取り組むことが学びの中心です。</p>
+            </article>
+            <article class="mini-card">
+              <span class="card-tag">オンライン</span>
+              <h3>毎週金曜18:00 進捗報告会</h3>
+              <p>全員が各自の進み具合を発表し合います。参加者同士のフィードバックやアドバイスはもちろん、講師への質問や現役エンジニアの実体験を聞く場にもなります。毎週報告がある緊張感が、日々の課題に向き合う動機になります。</p>
+            </article>
+            <article class="mini-card">
+              <span class="card-tag">オンサイト</span>
+              <h3>月1回の講義と交流</h3>
+              <p>参加者の習熟度や進み具合に合わせて、講師がその都度テーマを設定して講義を開催します。講義はオンサイトで行い、講義のほか、参加者同士の交流や、実際のプロダクト開発を疑似体験する時間もあります。録画・配信なし、現地参加のみです。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell" id="program">
+          <div class="section-head">
+            <div class="section-kicker">Program</div>
+            <div class="section-title">
+              <h2>学習カリキュラムは、アプリケーション開発の基礎からAI実装まで</h2>
+            </div>
+          </div>
+
+          <div class="program-list">
+            <article class="program-item">
+              <div class="program-no">01</div>
+              <div>
+                <div class="program-name">ウェブサイト作成</div>
+                <p class="program-copy">まずはページを実際に作り、Webの構造と制作の感覚をつかみます。Gitによる管理もこの流れのなかで扱います。</p>
+              </div>
+              <div class="list-meta">入口</div>
+            </article>
+            <article class="program-item">
+              <div class="program-no">02</div>
+              <div>
+                <div class="program-name">Webアプリケーション</div>
+                <p class="program-copy">入力、表示、処理の流れを知り、アプリケーションとして考える土台をつくります。</p>
+              </div>
+              <div class="list-meta">発展</div>
+            </article>
+            <article class="program-item">
+              <div class="program-no">03</div>
+              <div>
+                <div class="program-name">データベース</div>
+                <p class="program-copy">情報をどう持ち、どう扱うかを理解し、アプリケーションの裏側を考える土台をつくります。</p>
+              </div>
+              <div class="list-meta">基盤</div>
+            </article>
+            <article class="program-item">
+              <div class="program-no">04</div>
+              <div>
+                <div class="program-name">AI連携</div>
+                <p class="program-copy">APIの考え方も含めながら、AIを単独で使うのではなく、システムと組み合わせる視点を持ちます。</p>
+              </div>
+              <div class="list-meta">連携</div>
+            </article>
+            <article class="program-item">
+              <div class="program-no">05</div>
+              <div>
+                <div class="program-name">学び方を学ぶ</div>
+                <p class="program-copy">その先も自走できるよう、考え方と学び続ける力まで含めて扱います。</p>
+              </div>
+              <div class="list-meta">自走</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell" id="monitor">
+          <div class="section-head">
+            <div class="section-kicker">Monitor</div>
+            <div class="section-title">
+              <h2>第0期は、一緒にスクールを立ち上げる仲間の募集です。</h2>
+              <p>
+                完成された講座を受けることではなく、これから育っていく場に初期メンバーとして参加してくれる仲間の募集です。
+                試行錯誤を含む運営であることを前提に、参加者と一緒に教材や進め方も育てていきます。得られる最大の成果は「思い出」です。
+              </p>
+            </div>
+          </div>
+
+          <div class="monitor-banner">
+            <div class="info-card">
+              <h3>第0期について</h3>
+              <ul class="summary-list">
+                <li>教材・課題設計・講義テーマ・コミュニティ運営は、参加者の反応を見ながら調整していきます。</li>
+                <li>希望や適性が合う方には、将来的にコミュニティ運営や後続期のサポート役として関わる可能性もあります。</li>
+                <li>定員15名。応募多数の場合は審査あり。</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>こんな人と学びたい</h3>
+              <ul class="summary-list">
+                <li><strong>清潔</strong>な人</li>
+                <li><strong>未経験歓迎</strong> で、まず基礎から学びたい人</li>
+                <li><strong>年齢不問</strong> で、学び直しや挑戦をしたい人</li>
+                <li><strong>コミュニティ参加</strong> に価値を感じる人</li>
+                <li><strong>場づくり</strong> やコミュニティ運営にも関心がある人</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-shell" id="schedule">
+          <div class="section-head">
+            <div class="section-kicker">Schedule</div>
+            <div class="section-title">
+              <h2>4月プレスタートから、第0期の半年が始まります。</h2>
+            </div>
+          </div>
+
+          <div class="calendar-layout">
+            <div class="calendar-board">
+              <div class="calendar-month">
+                <h3>2026年4月末〜5月</h3>
+              </div>
+
+              <div class="calendar-weekdays">
+                <span>日</span>
+                <span>月</span>
+                <span>火</span>
+                <span>水</span>
+                <span>木</span>
+                <span>金</span>
+                <span>土</span>
+              </div>
+
+              <div class="calendar-grid">
+                <div class="calendar-cell"><div class="calendar-day">4/26</div></div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">4/27</div>
+                  <div class="calendar-event">
+                    <strong>説明会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell"><div class="calendar-day">4/28</div></div>
+                <div class="calendar-cell"><div class="calendar-day">4/29</div></div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">4/30</div>
+                  <div class="calendar-event">
+                    <strong>説明会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">5/1</div>
+                  <div class="calendar-event">
+                    <strong>進捗報告会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell"><div class="calendar-day">5/2</div></div>
+
+                <div class="calendar-cell"><div class="calendar-day">5/3</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/4</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/5</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/6</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/7</div></div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">5/8</div>
+                  <div class="calendar-event">
+                    <strong>進捗報告会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell"><div class="calendar-day">5/9</div></div>
+
+                <div class="calendar-cell"><div class="calendar-day">5/10</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/11</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/12</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/13</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/14</div></div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">5/15</div>
+                  <div class="calendar-event">
+                    <strong>進捗報告会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell"><div class="calendar-day">5/16</div></div>
+
+                <div class="calendar-cell"><div class="calendar-day">5/17</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/18</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/19</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/20</div></div>
+                <div class="calendar-cell"><div class="calendar-day">5/21</div></div>
+                <div class="calendar-cell calendar-cell--event">
+                  <div class="calendar-day">5/22</div>
+                  <div class="calendar-event">
+                    <strong>進捗報告会</strong>18:00-18:30
+                  </div>
+                </div>
+                <div class="calendar-cell"><div class="calendar-day">5/23</div></div>
+              </div>
+            </div>
+
+            <aside class="calendar-side">
+              <h3>主要な日程</h3>
+              <ul class="calendar-notes">
+                <li>
+                  <strong>
+                    4月27日（月）18:00〜18:30<br>
+                    4月30日（木）18:00〜18:30
+                  </strong>
+                  オンラインで追加募集の説明会を実施します。
+                </li>
+                <li>
+                  <strong>毎週金曜 18:00〜18:30</strong>
+                  オンラインで進捗報告会を実施します。（5月1日、8日、15日、22日）
+                </li>
+                <li>
+                  <strong>5月の講義</strong>
+                  月1回のオンサイト講義は、参加者の進み具合に合わせてテーマと日程を決めます。決まり次第ご案内します。
+                </li>
+                <li class="calendar-notes__deadline">
+                  <strong><span class="deadline-label">募集締切</span></strong>
+                  追加募集5名、定員に達し次第終了します。
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section-shell">
+          <div class="section-head">
+            <div class="section-kicker">Place</div>
+            <div class="section-title">
+              <h2>開催場所</h2>
+              <p>
+                オンサイト講義は各回ごとに会場が変わる前提です。
+                各回の会場は、旧辰巳寿司または LAND -ランド- のいずれかです。
+                詳細は日程ごとに案内します。
+              </p>
+            </div>
+          </div>
+
+          <div class="venue-grid">
+            <article class="venue-card">
+              <div class="small-label">会場 01</div>
+              <div class="venue-name">
+                <span class="venue-sub">&nbsp;</span>
+                <h3>旧辰巳寿司</h3>
+              </div>
+              <p>北海道中川郡幕別町本町123-1</p>
+            </article>
+            <article class="venue-card">
+              <div class="small-label">会場 02</div>
+              <div class="venue-name">
+                <span class="venue-sub">とかちのやりたい実現カフェ</span>
+                <h3>LAND -ランド-</h3>
+              </div>
+              <p>帯広市西2条南11丁目12番地1 天光堂ビル1階</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell" id="entry">
+          <div class="section-head">
+            <div class="section-kicker">Fee</div>
+            <div class="section-title">
+              <h2>スクール料金は無料、教材費などは実費です。</h2>
+              <p>
+                スクール料金は無料です。
+                ただし、教材費やAIなどの利用料は実費でかかります。
+              </p>
+            </div>
+          </div>
+
+          <div class="entry-grid">
+            <article class="price-card">
+              <div class="small-label">受講料</div>
+              <h3>スクール料金</h3>
+              <div class="price-callout">
+                <strong>無料</strong>
+              </div>
+              <p>受講料はかかりません。費用として案内するのは、教材費とサービス利用料の実費のみです。</p>
+            </article>
+
+            <article class="price-card">
+              <div class="small-label">実費</div>
+              <h3>実費の目安</h3>
+              <ul class="price-list">
+                <li>教材費: 月1,000円〜3,000円</li>
+                <li>AIなどの利用料: 月3,000円〜20,000円</li>
+                <li>初級の目安: 月額2,000円程度から</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell" id="faq">
+          <div class="section-head">
+            <div class="section-kicker">FAQ</div>
+            <div class="section-title">
+              <h2>参加前によくある質問</h2>
+              <p>参加前にお問い合わせの多い内容をまとめています。</p>
+            </div>
+          </div>
+
+          <div class="faq-grid">
+            <article class="faq-item">
+              <div class="faq-label">Q01</div>
+              <h3>未経験でも大丈夫ですか？</h3>
+              <p>大丈夫です。まずはウェブサイト作成から始め、手を動かしながら学ぶ前提で設計しています。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q02</div>
+              <h3>第0期モニターとはどういう位置づけですか？</h3>
+              <p>完成版の講座ではなく、立ち上げ期のモニター募集です。教材や進め方も改善しながら進みます。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q03</div>
+              <h3>参加型・自走型とはどういう意味ですか？</h3>
+              <p>普段は各自で進めますが、講義を受けて終わるのではなく、自分でも試し、進捗やつまずきを持ち寄り、共有とフィードバックを通して学びを続ける形です。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q04</div>
+              <h3>進捗報告会は何をするのですか？</h3>
+              <p>今週やったこと、詰まったこと、次にやることを共有し、続けるための接点にします。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q05</div>
+              <h3>毎週金曜はどのくらい参加が必要ですか？</h3>
+              <p>原則として8割以上の出席を想定しています。4週あれば3週以上が目安です。欠席の場合は事前にご連絡ください。毎週の接点を大切にできる方を対象にしています。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q06</div>
+              <h3>録画や配信はありますか？</h3>
+              <p>オンサイト講義は録画なし、配信なしです。現地参加の体験価値を大切にします。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q07</div>
+              <h3>ノートPCは必須ですか？</h3>
+              <p>持参できる方が望ましいですが、必須条件ではありません。台数限定でレンタル相談も可能です。ご希望の方は事前にご連絡ください。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q08</div>
+              <h3>質問はどこでできますか？</h3>
+              <p>日々の質問や相談はチャットで可能です。詰まったまま一人で止まらないようにします。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q09</div>
+              <h3>将来的に運営チームに関わることはありますか？</h3>
+              <p>可能性はあります。希望や適性が合う方には、コミュニティ運営や後続期のサポートを相談することがあります。ただし、受講時点で義務ではありません。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q10</div>
+              <h3>課題はどのくらいのペースで進めればよいですか？</h3>
+              <p>毎週課題を出しますが、進み具合は自分のペースで構いません。大切にしているのは止まらないことです。詰まった場合は進捗報告会やチャットで共有しながら、少しずつでも前に進めることを優先します。</p>
+            </article>
+            <article class="faq-item">
+              <div class="faq-label">Q11</div>
+              <h3>無料と書いてありますが、実際にはいくらかかりますか？</h3>
+              <p>スクールの受講料はかかりません。ただし教材費（月1,000〜3,000円）とAIなどのサービス利用料（月3,000〜20,000円）が実費としてかかります。初級の段階では月2,000円程度からが目安です。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cta">
+          <h2>AI時代に必要なスキルを、仲間と一緒に身につけよう</h2>
+          <div class="cta-actions">
+            <a class="button button--primary" href="https://forms.gle/Qd1MoM8bgF7TJDjq8" target="_blank" rel="noopener">第0期モニターに申し込む</a>
+            <a class="button button--secondary" href="https://forms.gle/JQQFdrLYjDHfyb7PA" target="_blank" rel="noopener">まず説明会に参加する</a>
+          </div>
+        </section>
+
+        <footer>
+          とかちプログラミングスクール / 第0期モニター生募集
+        </footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
